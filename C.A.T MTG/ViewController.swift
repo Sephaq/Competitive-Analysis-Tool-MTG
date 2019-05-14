@@ -19,11 +19,36 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.parametersView.delegate = self
         self.view.addSubview(parametersView)
         
         parametersView.autoPinEdgesToSuperviewSafeArea()
     }
 
 
+}
+
+extension ViewController: setParametersAndPredict{
+    func setFormat() {
+        print("Modern?")
+        self.parametersView.eventSizeChooser.text = "Modern"
+    }
+    
+    func setDeck() {
+        print("UB Mill?")
+        self.parametersView.deckChooser.text = "UB Mill"
+    }
+    
+    func setEventSize() {
+        print("Small?")
+        self.parametersView.deckChooser.text = "Small"
+        
+    }
+    
+    func runPredict() {
+        print("No can do!")
+    }
+    
+    
 }
 
