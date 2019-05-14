@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		E44E79BA228A58A600772852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E79B9228A58A600772852 /* AppDelegate.swift */; };
 		E44E79BC228A58A600772852 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E79BB228A58A600772852 /* ViewController.swift */; };
-		E44E79BF228A58A600772852 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44E79BD228A58A600772852 /* Main.storyboard */; };
 		E44E79C1228A58A800772852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44E79C0228A58A800772852 /* Assets.xcassets */; };
 		E44E79C4228A58A800772852 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44E79C2228A58A800772852 /* LaunchScreen.storyboard */; };
+		E44E79CE228A59AF00772852 /* Matchup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E79CD228A59AF00772852 /* Matchup.swift */; };
+		E44E79D0228A59B800772852 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E79CF228A59B800772852 /* Deck.swift */; };
+		E44E79D2228A5A9900772852 /* ParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E79D1228A5A9900772852 /* ParametersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E44E79B6228A58A600772852 /* C.A.T MTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C.A.T MTG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44E79B9228A58A600772852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44E79BB228A58A600772852 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E44E79BE228A58A600772852 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E44E79C0228A58A800772852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E44E79C3228A58A800772852 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E44E79C5228A58A800772852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E44E79CD228A59AF00772852 /* Matchup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchup.swift; sourceTree = "<group>"; };
+		E44E79CF228A59B800772852 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		E44E79D1228A5A9900772852 /* ParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		E44E79B8228A58A600772852 /* C.A.T MTG */ = {
 			isa = PBXGroup;
 			children = (
+				E44E79CC228A598B00772852 /* Championship */,
+				E44E79CB228A598500772852 /* Model */,
 				E44E79B9228A58A600772852 /* AppDelegate.swift */,
 				E44E79BB228A58A600772852 /* ViewController.swift */,
-				E44E79BD228A58A600772852 /* Main.storyboard */,
 				E44E79C0228A58A800772852 /* Assets.xcassets */,
 				E44E79C2228A58A800772852 /* LaunchScreen.storyboard */,
 				E44E79C5228A58A800772852 /* Info.plist */,
+				E44E79D1228A5A9900772852 /* ParametersView.swift */,
 			);
 			path = "C.A.T MTG";
+			sourceTree = "<group>";
+		};
+		E44E79CB228A598500772852 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E44E79CD228A59AF00772852 /* Matchup.swift */,
+				E44E79CF228A59B800772852 /* Deck.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E44E79CC228A598B00772852 /* Championship */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Championship;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +146,6 @@
 			files = (
 				E44E79C4228A58A800772852 /* LaunchScreen.storyboard in Resources */,
 				E44E79C1228A58A800772852 /* Assets.xcassets in Resources */,
-				E44E79BF228A58A600772852 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44E79D0228A59B800772852 /* Deck.swift in Sources */,
 				E44E79BC228A58A600772852 /* ViewController.swift in Sources */,
+				E44E79CE228A59AF00772852 /* Matchup.swift in Sources */,
+				E44E79D2228A5A9900772852 /* ParametersView.swift in Sources */,
 				E44E79BA228A58A600772852 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E44E79BD228A58A600772852 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E44E79BE228A58A600772852 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E44E79C2228A58A800772852 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
