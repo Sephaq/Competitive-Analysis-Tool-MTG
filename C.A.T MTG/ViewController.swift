@@ -9,10 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let parametersView:  ParametersView = {
+        let view = ParametersView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setupSubviews()
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.addSubview(parametersView)
+        
+        parametersView.autoPinEdgesToSuperviewSafeArea()
     }
 
 
