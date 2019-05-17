@@ -33,7 +33,7 @@ class ParametersView: UIView{
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 1
         label.tag = 1
-        label.text = "Pick the parameters"
+        label.text = "\(NSLocalizedString("pickTheParameters", comment: "")):"
         label.textAlignment = .center
         label.layer.cornerRadius = 5
         label.layer.borderWidth = 1
@@ -44,6 +44,7 @@ class ParametersView: UIView{
     let formatContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isUserInteractionEnabled = true
         view.layer.cornerRadius = 5
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.black.cgColor
@@ -54,9 +55,10 @@ class ParametersView: UIView{
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontSizeToFitWidth = true
+        label.isUserInteractionEnabled = true
         label.numberOfLines = 1
         label.tag = 1
-        label.text = "Format:"
+        label.text = "\(NSLocalizedString("format", comment: "")):"
         label.textAlignment = .left
         return label
     }()
@@ -64,6 +66,7 @@ class ParametersView: UIView{
     let deckContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isUserInteractionEnabled = true
         view.layer.cornerRadius = 5
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.black.cgColor
@@ -74,9 +77,10 @@ class ParametersView: UIView{
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontSizeToFitWidth = true
+        label.isUserInteractionEnabled = true
         label.numberOfLines = 1
         label.tag = 1
-        label.text = "Deck:"
+        label.text = "\(NSLocalizedString("deck", comment: "")):"
         label.textAlignment = .left
         return label
     }()
@@ -84,6 +88,7 @@ class ParametersView: UIView{
     let eventContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isUserInteractionEnabled = true
         view.layer.cornerRadius = 5
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.black.cgColor
@@ -94,9 +99,10 @@ class ParametersView: UIView{
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontSizeToFitWidth = true
+        label.isUserInteractionEnabled = true
         label.numberOfLines = 1
         label.tag = 1
-        label.text = "Event Size:"
+        label.text = "\(NSLocalizedString("eventSize", comment: "")):"
         label.textAlignment = .left
         return label
     }()
@@ -114,9 +120,12 @@ class ParametersView: UIView{
     func setupSubviews(){
         self.backgroundColor = UIColor.white
         self.addSubview(infoLabel)
-        self.addSubview(formatChooser)
-        self.addSubview(deckChooser)
-        self.addSubview(eventSizeChooser)
+        self.addSubview(formatContainer)
+        self.formatContainer.addSubview(formatChooser)
+        self.addSubview(deckContainer)
+        self.deckContainer.addSubview(deckChooser)
+        self.addSubview(eventContainer)
+        self.eventContainer.addSubview(eventSizeChooser)
         self.addSubview(predictButton)
         
         layoutSubviews()
@@ -131,26 +140,35 @@ class ParametersView: UIView{
             self.infoLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: TRAILING_OFFSET)
             self.infoLabel.autoSetDimension(.height, toSize: UIScreen.main.bounds.height * 0.12)
             
+            //Format Container
+            self.formatContainer.autoPinEdge(.top, to: .bottom, of: self.infoLabel, withOffset: TOP_OFFSET)
+            self.formatContainer.autoPinEdge(toSuperviewEdge: .leading, withInset: LEADING_OFFSET)
+            self.formatContainer.autoPinEdge(toSuperviewEdge: .trailing, withInset: TRAILING_OFFSET)
+            self.formatContainer.autoSetDimension(.height, toSize: UIScreen.main.bounds.height * 0.12)
+            
             //FormatChooser
-            self.formatChooser.autoPinEdge(.top, to: .bottom, of: self.infoLabel, withOffset: TOP_OFFSET)
-            self.formatChooser.autoPinEdge(toSuperviewEdge: .leading, withInset: LEADING_OFFSET)
-            self.formatChooser.autoPinEdge(toSuperviewEdge: .trailing, withInset: TRAILING_OFFSET)
-            self.formatChooser.autoSetDimension(.height, toSize: UIScreen.main.bounds.height * 0.12)
+            self.formatChooser.autoPinEdgesToSuperviewEdges(with: .init(top: 0, left: 10, bottom: 0, right: 0))
+            
+            //Deck Container
+            self.deckContainer.autoPinEdge(.top, to: .bottom, of: self.formatContainer, withOffset: TOP_OFFSET)
+            self.deckContainer.autoPinEdge(toSuperviewEdge: .leading, withInset: LEADING_OFFSET)
+            self.deckContainer.autoPinEdge(toSuperviewEdge: .trailing, withInset: TRAILING_OFFSET)
+            self.deckContainer.autoSetDimension(.height, toSize: UIScreen.main.bounds.height * 0.12)
             
             //DeckChooser
-            self.deckChooser.autoPinEdge(.top, to: .bottom, of: self.formatChooser, withOffset: TOP_OFFSET)
-            self.deckChooser.autoPinEdge(toSuperviewEdge: .leading, withInset: LEADING_OFFSET)
-            self.deckChooser.autoPinEdge(toSuperviewEdge: .trailing, withInset: TRAILING_OFFSET)
-            self.deckChooser.autoSetDimension(.height, toSize: UIScreen.main.bounds.height * 0.12)
+            self.deckChooser.autoPinEdgesToSuperviewEdges(with: .init(top: 0, left: 10, bottom: 0, right: 0))
+            
+            //EventSizeContainer
+            self.eventContainer.autoPinEdge(.top, to: .bottom, of: self.deckContainer, withOffset: TOP_OFFSET)
+            self.eventContainer.autoPinEdge(toSuperviewEdge: .leading, withInset: LEADING_OFFSET)
+            self.eventContainer.autoPinEdge(toSuperviewEdge: .trailing, withInset: TRAILING_OFFSET)
+            self.eventContainer.autoSetDimension(.height, toSize: UIScreen.main.bounds.height * 0.12)
             
             //eventSizerChooser
-            self.eventSizeChooser.autoPinEdge(.top, to: .bottom, of: self.deckChooser, withOffset: TOP_OFFSET)
-            self.eventSizeChooser.autoPinEdge(toSuperviewEdge: .leading, withInset: LEADING_OFFSET)
-            self.eventSizeChooser.autoPinEdge(toSuperviewEdge: .trailing, withInset: TRAILING_OFFSET)
-            self.eventSizeChooser.autoSetDimension(.height, toSize: UIScreen.main.bounds.height * 0.12)
+            self.eventSizeChooser.autoPinEdgesToSuperviewEdges(with: .init(top: 0, left: 10, bottom: 0, right: 0))
             
             //PredictButton
-            self.predictButton.autoPinEdge(.top, to: .bottom, of: self.eventSizeChooser, withOffset: TOP_OFFSET)
+            self.predictButton.autoPinEdge(.top, to: .bottom, of: self.eventContainer, withOffset: TOP_OFFSET)
             self.predictButton.autoPinEdge(toSuperviewEdge: .leading, withInset: LEADING_OFFSET)
             self.predictButton.autoPinEdge(toSuperviewEdge: .trailing, withInset: TRAILING_OFFSET)
             self.predictButton.autoPinEdge(toSuperviewEdge: .bottom, withInset: BOTTOM_OFFSET)
@@ -166,34 +184,34 @@ class ParametersView: UIView{
         self.predictButton.addTarget(self, action: #selector(makePrediction), for: .touchUpInside)
         
         //chooseFormat
-        let formatTouch = UIGestureRecognizer()
-        formatTouch.addTarget(self, action: #selector(chooseFormat))
-        self.eventSizeChooser.addGestureRecognizer(formatTouch)
+        let formatTouch = UITapGestureRecognizer()
+        formatTouch.addTarget(self, action: #selector(chooseFormat(_:)))
+        self.formatContainer.addGestureRecognizer(formatTouch)
         
         //ChooseDeck
-        let deckTouch = UIGestureRecognizer()
-        deckTouch.addTarget(self, action: #selector(chooseDeck))
-        self.deckChooser.addGestureRecognizer(deckTouch)
+        let deckTouch = UITapGestureRecognizer()
+        deckTouch.addTarget(self, action: #selector(chooseDeck(_:)))
+        self.deckContainer.addGestureRecognizer(deckTouch)
         
         //EventSize
-        let eventTouch = UIGestureRecognizer()
-        eventTouch.addTarget(self, action: #selector(chooseEventSize))
-        self.eventSizeChooser.addGestureRecognizer(eventTouch)
+        let eventTouch = UITapGestureRecognizer()
+        eventTouch.addTarget(self, action: #selector(chooseEventSize(_:)))
+        self.eventContainer.addGestureRecognizer(eventTouch)
     }
     
-    @objc func chooseFormat(){
+    @objc func chooseFormat(_ sender: UITapGestureRecognizer){
         delegate?.setFormat()
     }
     
-    @objc func chooseDeck(){
+    @objc func chooseDeck(_ sender: UITapGestureRecognizer){
         delegate?.setDeck()
     }
     
-    @objc func chooseEventSize(){
+    @objc func chooseEventSize(_ sender: UITapGestureRecognizer){
         delegate?.setEventSize()
     }
     
-    @objc func makePrediction(){
+    @objc func makePrediction(_ sender: UIButton){
         delegate?.runPredict()
     }
 }

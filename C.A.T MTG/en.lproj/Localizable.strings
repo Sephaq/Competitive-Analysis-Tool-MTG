@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  C.A.T MTG
+
+  Created by Marvin Gonçalves de Aquino on 2019-05-17.
+  Copyright © 2019 Marvin Gonçalves de Aquino. All rights reserved.
+*/
+"deck" = "Deck";
+"format" = "Format";
+"eventSize" = "Event Size";
+"pickTheParameters" = "Pick the Parameters";

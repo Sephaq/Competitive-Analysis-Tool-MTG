@@ -12,6 +12,8 @@ class Matchup {
     var deck: Int
     var opponentDeck: Int
     var matchup: String
+    var victory: Int?
+    var loss: Int?
     
     init(deck: Int, opponentDeck: Int) {
         self.deck = deck

@@ -31,18 +31,20 @@ class ViewController: UIViewController {
 extension ViewController: setParametersAndPredict{
     func setFormat() {
         print("Modern?")
-        self.parametersView.eventSizeChooser.text = "Modern"
+        self.parametersView.formatChooser.text?.append(contentsOf: " Modern")
+//        self.parametersView.formatChooser.text = "\(NSLocalizedString("format", comment: "")): \()"
     }
     
     func setDeck() {
         print("UB Mill?")
-        self.parametersView.deckChooser.text = "UB Mill"
+        self.parametersView.deckChooser.text?.append(contentsOf: " UB Mill")
+//        self.parametersView.formatChooser.text = "\(NSLocalizedString("deck", comment: "")): \()"
     }
     
     func setEventSize() {
         print("Small?")
-        self.parametersView.deckChooser.text = "Small"
-        
+        self.parametersView.eventSizeChooser.text?.append(contentsOf: " Small")
+//        self.parametersView.formatChooser.text = "\(NSLocalizedString("eventSize", comment: "")): \()"
     }
     
     func runPredict() {
