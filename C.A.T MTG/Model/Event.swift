@@ -16,6 +16,6 @@ enum EventSize {
 class Event {
     var eventSize: EventSize?
     var rounds: Int?
-    var roundsHistory = Array<Array<Round>>()
-    var decks = Array<Deck>()
+    var roundsHistory = Array<Round>()
+    var players = Array<Player>()
 }

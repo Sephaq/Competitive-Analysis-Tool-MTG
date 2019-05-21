@@ -9,15 +9,17 @@
 import Foundation
 
 class Matchup {
-    var deck: Int
-    var opponentDeck: Int
-    var matchup: String
+    var player: Player
+    var opponent: Player
+    var playerMatchup: String
+    var deckMatchup: String
     var victory: Int?
     var loss: Int?
     
-    init(deck: Int, opponentDeck: Int) {
-        self.deck = deck
-        self.opponentDeck = opponentDeck
-        self.matchup = String("\(self.deck)\(self.opponentDeck)")
+    init(player: Player, opponent: Player) {
+        self.player = player
+        self.opponent = opponent
+        self.deckMatchup = String("\(self.player.deck.id)\(self.opponent.deck.id)")
+        self.playerMatchup = String("\(self.player.name)\(self.opponent.name)")
     }
 }
