@@ -10,24 +10,43 @@ import Foundation
 
 class EventGenerator: NSObject {
     
-    static func setPlayers() -> [Player]{
-        //TODO: Set Players based on deck presence
-        return Array<Player>()
+    static func setPlayers(players: Int) -> [Player]{
+        //DONE: Set Players based on deck presence
+        let representativity = DeckInfo.deckRepresentativty()
+        var playersDeck = Array<Player>()
+        var nOfDecks: [Int:Int] = [:]
+        var total = 0
+        for i in representativity{
+            nOfDecks.updateValue(Int(roundf(i.value * Float(players))), forKey: i.key)
+            total += Int(roundf(i.value * Float(players)))
+        }
+        let decksId = Array(nOfDecks.keys).count
+            for i in 0...players{
+                let randomDeck = Int.random(in: 0...decksId)
+                print(nOfDecks[randomDeck])
+                playersDeck.append(Player(name: "player\(i)", deck: DeckInfo.getDeckInfo(id: randomDeck), id: i))
+                
+            }
+        return playersDeck
     }
     
     static func generateEvent(eventSize: EventSize, choosenPlayer: Player) -> Event{
         let event = Event()
+        var nPlayers = 0
         event.eventSize = eventSize
         switch eventSize {
         case .big:
-            event.rounds = 15
+            event.rounds = 10 //Players 410+
+            nPlayers = 410
         case .medium:
-            event.rounds = 7
+            event.rounds = 7 //Players 128 MAX
+            nPlayers = 128
         default:
-            event.rounds = 4
+            event.rounds = 4 //Playersd 16 MAX
+            nPlayers = 16
         }
         event.players.append(choosenPlayer)
-        event.players.append(contentsOf: setPlayers())
+        event.players.append(contentsOf: setPlayers(players: nPlayers))
         return event
     }
     

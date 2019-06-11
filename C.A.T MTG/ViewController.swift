@@ -21,8 +21,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.parametersView.delegate = self
         self.view.addSubview(parametersView)
-        
+        DeckInfo.loadDeckLists()
+        DeckInfo.loadDeckInfo()
         parametersView.autoPinEdgesToSuperviewSafeArea()
+        self.title = NSLocalizedString("C.A.T.", comment: "")
+    }
+    
+    func pickDeck(){
+        let picker = PickerViewController()
+        picker.setDataSource(decks: DeckInfo.getDecks(), strings: [])
+        picker.delegate = self
+        picker.preferredContentSize = .init(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - (UIScreen.main.bounds.height/4)))
+        picker.modalPresentationStyle = .overFullScreen
+        self.present(picker, animated: true, completion: nil)
     }
 
 
@@ -36,9 +47,7 @@ extension ViewController: setParametersAndPredict{
     }
     
     func setDeck() {
-        print("UB Mill?")
-        self.parametersView.deckChooser.text?.append(contentsOf: " UB Mill")
-//        self.parametersView.formatChooser.text = "\(NSLocalizedString("deck", comment: "")): \()"
+        pickDeck()
     }
     
     func setEventSize() {
@@ -49,6 +58,19 @@ extension ViewController: setParametersAndPredict{
     
     func runPredict() {
         print("No can do!")
+        //TODO: Make basic prediction first
+    }
+    
+}
+
+extension ViewController: ChooseDeck{
+    
+    func choosenDeck(deck: Deck) {
+        self.parametersView.deckChooser.text? = "\(NSLocalizedString("format", comment: "")): \(deck.name)"
+    }
+    
+    func choosenFormat(format: String) {
+//        nada acontece
     }
     
     

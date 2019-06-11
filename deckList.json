@@ -1,0 +1,167 @@
+{"decks":[
+{
+	"name":"BUR Aggro",
+	"deckid":1,
+	"archetype": "Grixis Death's Shadow"
+},
+{
+	"name":"UW Control",
+	"deckid":2,
+	"archetype":"UW Control"
+},
+{
+	"name":"RG Midrange",
+	"deckid":3,
+	"archetype":"Ponza"
+},
+{
+	"name":"UB Combo",
+	"deckid":4,
+	"archerype":"UB Mill"
+},
+{
+	"name":"UR Aggro",
+	"deckid":5,
+	"archerype":"UR Phoenix"
+},
+{
+	"name":"WGU Aggro",
+	"deckid":6,
+	"archerype":"Humans"
+},
+{
+	"name":"UWG Aggro",
+	"deckid":7,
+	"archerype":"Spirts"
+},
+{
+	"name":"UR Control",
+	"deckid":8,
+	"archerype":"UR Control"
+},
+{
+	"name":"G Control",
+	"deckid":9,
+	"archerype":"G Tron"
+},
+{
+	"name":"GU Combo",
+	"deckid":10,
+	"archerype":"KCI"
+},
+{
+	"name":"GRU Combo",
+	"deckid":11,
+	"archerype":"Titan"
+},
+{
+	"name":"BRG Midrange",
+	"deckid":12,
+	"archerype":"Jund"
+},
+{
+	"name":"BG Midrange",
+	"deckid":13,
+	"archerype":"BG Midrange"
+},
+{
+	"name":"RWG Aggro",
+	"deckid":14,
+	"archerype":"Burn"
+},
+{
+	"name":"UBR Control",
+	"deckid":15,
+	"archerype":"Grixis Control"
+},
+{
+	"name":"G Aggro",
+	"deckid":16,
+	"archerype":"Elves"
+},
+{
+	"name":"UR Combo",
+	"deckid":17,
+	"archerype":"Storm"
+},
+{
+	"name":"GWRU Combo",
+	"deckid":18,
+	"archerype":"Amulet TItan"
+},
+{
+	"name":"BR Aggro",
+	"deckid":19,
+	"archerype":"Hollow One"
+},
+{
+	"name":"UB Control",
+	"deckid":20,
+	"archerype":"Lanternless Control"
+},
+{
+	"name":"UGW Aggro",
+	"deckid":21,
+	"archerype":"Boggles"
+},
+{
+	"name":"RBW Midrange",
+	"deckid":22,
+	"archerype":"Mardu Midrange"
+},
+{
+	"name":"G Midrange",
+	"deckid":23,
+	"archerype":"????"
+},
+{
+	"name":"Coloress Aggro",
+	"deckid":24,
+	"archerype":"Eldrazi"
+},
+{
+	"name":"GR Combo",
+	"deckid":25,
+	"archerype":"TitanShift"
+},
+{
+	"name":"BRG Aggro",
+	"deckid":26,
+	"archerype":"Jund Aggro"
+},
+{
+	"name":"B Control",
+	"deckid":27,
+	"archerype":"8 Rack"
+},
+{
+	"name":"BGRU Combo",
+	"deckid":28,
+	"archerype":"Dredge"
+},
+{
+	"name":"UGW Combo",
+	"deckid":29,
+	"archerype":"Bant Flash"
+},
+{
+	"name":"UGBW Combo",
+	"deckid":30,
+	"archerype":"Vizier Combo"
+},
+{
+	"name":"UR Aggro",
+	"deckid":31,
+	"archerype":"Affinity"
+},
+{
+	"name":"BGU Control",
+	"deckid":32,
+	"archerype":"Sultai Control"
+},
+{
+	"name":"UWB Control",
+	"deckid":33,
+	"archerype":"Esper Control"
+}
+]}

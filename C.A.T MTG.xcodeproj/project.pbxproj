@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41816DA22A9FFF100242314 /* DeckInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41816D922A9FFF100242314 /* DeckInfo.swift */; };
+		E41816DC22AA05D600242314 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41816DB22AA05D500242314 /* SwiftyJSON.swift */; };
 		E44E79BA228A58A600772852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E79B9228A58A600772852 /* AppDelegate.swift */; };
 		E44E79BC228A58A600772852 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E79BB228A58A600772852 /* ViewController.swift */; };
 		E44E79C1228A58A800772852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44E79C0228A58A800772852 /* Assets.xcassets */; };
@@ -23,6 +25,10 @@
 		E44E7B09228F161E00772852 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E7B08228F161E00772852 /* Event.swift */; };
 		E44E7B0C228F1D1E00772852 /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E7B0B228F1D1E00772852 /* Predictor.swift */; };
 		E44E7B0E229389ED00772852 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E7B0D229389EC00772852 /* Player.swift */; };
+		E44ECC8F22AEF4F6002ABCC0 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44ECC8E22AEF4F6002ABCC0 /* PickerViewController.swift */; };
+		E4528FC922AF176F00DA7ECC /* deckList.json in Resources */ = {isa = PBXBuildFile; fileRef = E4528FC822AF176F00DA7ECC /* deckList.json */; };
+		E4528FCB22AF177400DA7ECC /* deckRepresentativity.json in Resources */ = {isa = PBXBuildFile; fileRef = E4528FCA22AF177400DA7ECC /* deckRepresentativity.json */; };
+		E4528FCE22AFE64300DA7ECC /* decksMatchup.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E4528FCD22AFE64300DA7ECC /* decksMatchup.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +119,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E41816D922A9FFF100242314 /* DeckInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckInfo.swift; sourceTree = "<group>"; };
+		E41816DB22AA05D500242314 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E44E79B6228A58A600772852 /* C.A.T MTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C.A.T MTG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44E79B9228A58A600772852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44E79BB228A58A600772852 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +249,10 @@
 		E44E7B08228F161E00772852 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E44E7B0B228F1D1E00772852 /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		E44E7B0D229389EC00772852 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		E44ECC8E22AEF4F6002ABCC0 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		E4528FC822AF176F00DA7ECC /* deckList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = deckList.json; sourceTree = SOURCE_ROOT; };
+		E4528FCA22AF177400DA7ECC /* deckRepresentativity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = deckRepresentativity.json; sourceTree = SOURCE_ROOT; };
+		E4528FCD22AFE64300DA7ECC /* decksMatchup.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = decksMatchup.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,9 +267,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E41816D822A9FFDA00242314 /* DeckInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E41816D922A9FFF100242314 /* DeckInfo.swift */,
+			);
+			path = DeckInfo;
+			sourceTree = "<group>";
+		};
 		E44E79AD228A58A600772852 = {
 			isa = PBXGroup;
 			children = (
+				E4528FCC22AFE63400DA7ECC /* MLModel */,
+				E4528FBF22AF174C00DA7ECC /* Jsons */,
 				E44E79D3228A5DCC00772852 /* External */,
 				E44E79B8228A58A600772852 /* C.A.T MTG */,
 				E44E79B7228A58A600772852 /* Products */,
@@ -275,6 +297,8 @@
 		E44E79B8228A58A600772852 /* C.A.T MTG */ = {
 			isa = PBXGroup;
 			children = (
+				E41816DB22AA05D500242314 /* SwiftyJSON.swift */,
+				E41816D822A9FFDA00242314 /* DeckInfo */,
 				E44E7B0A228F1D0300772852 /* Predictor */,
 				E44E79CC228A598B00772852 /* Event */,
 				E44E79CB228A598500772852 /* Model */,
@@ -285,6 +309,7 @@
 				E44E79C5228A58A800772852 /* Info.plist */,
 				E44E79D1228A5A9900772852 /* ParametersView.swift */,
 				E44E7B02228EFBE700772852 /* Localizable.strings */,
+				E44ECC8E22AEF4F6002ABCC0 /* PickerViewController.swift */,
 			);
 			path = "C.A.T MTG";
 			sourceTree = "<group>";
@@ -552,6 +577,23 @@
 			path = Predictor;
 			sourceTree = "<group>";
 		};
+		E4528FBF22AF174C00DA7ECC /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				E4528FCA22AF177400DA7ECC /* deckRepresentativity.json */,
+				E4528FC822AF176F00DA7ECC /* deckList.json */,
+			);
+			path = Jsons;
+			sourceTree = "<group>";
+		};
+		E4528FCC22AFE63400DA7ECC /* MLModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4528FCD22AFE64300DA7ECC /* decksMatchup.mlmodel */,
+			);
+			path = MLModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -687,9 +729,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4528FC922AF176F00DA7ECC /* deckList.json in Resources */,
 				E44E79C4228A58A800772852 /* LaunchScreen.storyboard in Resources */,
 				E44E7B00228EFBE700772852 /* Localizable.strings in Resources */,
 				E44E79C1228A58A800772852 /* Assets.xcassets in Resources */,
+				E4528FCB22AF177400DA7ECC /* deckRepresentativity.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,8 +752,12 @@
 				E44E7B0C228F1D1E00772852 /* Predictor.swift in Sources */,
 				E44E7A83228A5DCC00772852 /* iOSDemo1ViewController.swift in Sources */,
 				E44E79CE228A59AF00772852 /* Matchup.swift in Sources */,
+				E41816DA22A9FFF100242314 /* DeckInfo.swift in Sources */,
 				E44E79D2228A5A9900772852 /* ParametersView.swift in Sources */,
 				E44E7B07228F155F00772852 /* Round.swift in Sources */,
+				E41816DC22AA05D600242314 /* SwiftyJSON.swift in Sources */,
+				E4528FCE22AFE64300DA7ECC /* decksMatchup.mlmodel in Sources */,
+				E44ECC8F22AEF4F6002ABCC0 /* PickerViewController.swift in Sources */,
 				E44E79BA228A58A600772852 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

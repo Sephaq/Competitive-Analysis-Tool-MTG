@@ -1,0 +1,896 @@
+{"representativity":[
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerid":1,
+	"deckId":1
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":4,
+	"deckId":2
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":11,
+	"deckId":8
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":9,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":3,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":5,
+	"deckId":10
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":2,
+	"deckId":2
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":14,
+	"deckId":5
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":16,
+	"deckId":3
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":12,
+	"deckId":11
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":17,
+	"deckId":14
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":7,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":18,
+	"deckId":16
+},
+{
+	"format":"Modern",
+	"date":"12-Oct-18",
+	"playerId":15,
+	"deckId":15
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":11,
+	"deckId":8
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":3,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":1,
+	"deckId":1
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":2,
+	"deckId":2
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":9,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":5,
+	"deckId":10
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":4,
+	"deckId":2
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":16,
+	"deckId":3
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":14,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":15,
+	"deckId":15
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":18,
+	"deckId":16
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":8,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":17,
+	"deckId":14
+},
+{
+	"format":"Modern",
+	"date":"17-Dec-18",
+	"playerId":12,
+	"deckId":11
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":1,
+	"deckId":4
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":12,
+	"deckId":11
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":5,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":2,
+	"deckId":2
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":11,
+	"deckId":2
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":9,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":7,
+	"deckId":18
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":3,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":4,
+	"deckId":3
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":15,
+	"deckId":15
+},
+{
+	"format":"Modern",
+	"date":"07-Jan-19",
+	"playerId":27,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":26,
+	"deckId":19
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":6,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":4,
+	"deckId":19
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":15,
+	"deckId":15
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":21,
+	"deckId":22
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":5,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":7,
+	"deckId":18
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":3,
+	"deckId":20
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":19,
+	"deckId":16
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":28,
+	"deckId":14
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":9,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":1,
+	"deckId":4
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":11,
+	"deckId":2
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":2,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":20,
+	"deckId":21
+},
+{
+	"format":"Modern",
+	"date":"14-Jan-19",
+	"playerId":4,
+	"deckId":1
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":23,
+	"deckId":23
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":4,
+	"deckId":1
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":6,
+	"deckId":14
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":20,
+	"deckId":21
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":21,
+	"deckId":22
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":11,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":2,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":5,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":3,
+	"deckId":20
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":7,
+	"deckId":18
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":1,
+	"deckId":4
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":24,
+	"deckId":24
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":25,
+	"deckId":25
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":26,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":9,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":14,
+	"deckId":26
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":26,
+	"deckId":1
+},
+{
+	"format":"Modern",
+	"date":"21-Jan-19",
+	"playerId":3,
+	"deckId":15
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":32,
+	"deckId":14
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":26,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":33,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":15,
+	"deckId":15
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":2,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":4,
+	"deckId":10
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":1,
+	"deckId":4
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":11,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":9,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":23,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":3,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":5,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":28,
+	"deckId":14
+},
+{
+	"format":"Modern",
+	"date":"09-Apr-10",
+	"playerId":34,
+	"deckId":27
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":14,
+	"deckId":28
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":5,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":26,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":3,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":4,
+	"deckId":1
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":23,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":11,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":6,
+	"deckId":14
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":7,
+	"deckId":18
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":9,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"02-Apr-19",
+	"playerId":2,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":11,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":4,
+	"deckId":3
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":24,
+	"deckId":24
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":14,
+	"deckId":28
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":5,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":7,
+	"deckId":18
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":1,
+	"deckId":4
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":23,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":33,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":3,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":20,
+	"deckId":21
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":6,
+	"deckId":14
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":9,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":2,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":4,
+	"deckId":1
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":26,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"26-Mar-19",
+	"playerId":2,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":26,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":23,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":20,
+	"deckId":21
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":1,
+	"deckId":4
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":6,
+	"deckId":14
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":14,
+	"deckId":28
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":25,
+	"deckId":25
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":21,
+	"deckId":22
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":11,
+	"deckId":17
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":24,
+	"deckId":24
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":4,
+	"deckId":1
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":5,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":2,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":33,
+	"deckId":13
+},
+{
+	"format":"Modern",
+	"date":"21-Mar-19",
+	"playerId":9,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":2,
+	"deckId":7
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":8,
+	"deckId":12
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":9,
+	"deckId":6
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":14,
+	"deckId":28
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":3,
+	"deckId":9
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":7,
+	"deckId":18
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":23,
+	"deckId":30
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":11,
+	"deckId":19
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":1,
+	"deckId":4
+},
+{
+	"format":"Modern",
+	"date":"23-Apr-19",
+	"playerId":9,
+	"deckId":21
+}
+]
