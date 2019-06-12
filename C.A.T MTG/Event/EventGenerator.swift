@@ -11,7 +11,6 @@ import Foundation
 class EventGenerator: NSObject {
     
     static func setPlayers(players: Int) -> [Player]{
-        //DONE: Set Players based on deck presence
         let representativity = DeckInfo.deckRepresentativty()
         var playersDeck = Array<Player>()
         var nOfDecks: [Int:Int] = [:]
@@ -21,7 +20,7 @@ class EventGenerator: NSObject {
             total += Int(roundf(i.value * Float(players)))
         }
         let decksId = Array(nOfDecks.keys).count
-            for i in 0...players{
+            for i in 1...players+1{
                 let randomDeck = Int.random(in: 0...decksId)
                 print(nOfDecks[randomDeck])
                 playersDeck.append(Player(name: "player\(i)", deck: DeckInfo.getDeckInfo(id: randomDeck), id: i))
@@ -60,7 +59,7 @@ class EventGenerator: NSObject {
                 continue outer
             }
             var maybeOpponent: Player?
-            for pOpponent in event.players.filter({ opponent in (player.points! <= opponent.points! &&
+            for pOpponent in event.players.filter({ opponent in (player.points <= opponent.points &&
                 player.id != opponent.id &&
                 !(havePlayedAgainst(p1: player, p2: opponent, event: event)) &&
                 !pairedPlayers.contains(where: { pairedPlayer -> Bool in pairedPlayer.id == opponent.id }))}){
@@ -73,7 +72,7 @@ class EventGenerator: NSObject {
                         if maybeOpponent == nil{
                             maybeOpponent = pOpponent
                         }else{
-                            if (maybeOpponent?.points ?? 0 < pOpponent.points ?? 0) {
+                            if (maybeOpponent?.points ?? 0 < pOpponent.points) {
                                 maybeOpponent = pOpponent
                             }
                         }

@@ -10,3 +10,7 @@
 "eventSize" = "Tamanho do Evento";
 "pickTheParameters" = "Escolha os Parametros";
 "C.A.T." = "Ferramenta de Analise Competitiva";
+"nOfPLayers" = "N de Jogadores";
+"deckInfo" = "Informação do Baralho";
+"rounds"= "Rodadas";
+"eventSize" = "Tamanho do Evento";

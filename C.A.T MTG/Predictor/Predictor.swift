@@ -20,32 +20,34 @@ class Predictor {
         choosenPlayer = player
     }
     
+    func generateEvent(eventSize: EventSize){
+        mainEvent = EventGenerator.generateEvent(eventSize: eventSize, choosenPlayer: choosenPlayer)
+    }
+    
     func roundResults(){
-        guard var matchups = mainEvent.roundsHistory.last?.matchup else {
-            print("error")
-            return
-        }
-        
-        for matchup in matchups {
+        for index in mainEvent.roundsHistory.last!.matchup.indices {
+            let matchup = mainEvent.roundsHistory.last!.matchup[index]
             var results: [String:Double] = [:]
                 do {
-                    results.updateValue(try self.model.prediction(matchup: Double(matchup.deckMatchup)!, winPercentage: 1).prediction, forKey: "2-0")
-                    results.updateValue(try self.model.prediction(matchup: Double(matchup.deckMatchup)!, winPercentage: 0.6666).prediction, forKey: "2-1")
-                    results.updateValue(try self.model.prediction(matchup: Double(matchup.deckMatchup)!, winPercentage: 0.333).prediction, forKey: "1-2")
-                    results.updateValue(try self.model.prediction(matchup: Double(matchup.deckMatchup)!, winPercentage: 0).prediction, forKey: "0-2")
+                    results.updateValue(try self.model.prediction(matchup: Double(self.mainEvent.roundsHistory.last!.matchup[index].deckMatchup)!, winPercentage: 1).prediction, forKey: "2-0")
+                    results.updateValue(try self.model.prediction(matchup: Double(self.mainEvent.roundsHistory.last!.matchup[index].deckMatchup)!, winPercentage: 0.6666).prediction, forKey: "2-1")
+                    results.updateValue(try self.model.prediction(matchup: Double(self.mainEvent.roundsHistory.last!.matchup[index].deckMatchup)!, winPercentage: 0.333).prediction, forKey: "1-2")
+                    results.updateValue(try self.model.prediction(matchup: Double(self.mainEvent.roundsHistory.last!.matchup[index].deckMatchup)!, winPercentage: 0).prediction, forKey: "0-2")
                 }catch{
                     print("Model Error")
                 }
             
-            if (matchup.player.id == choosenPlayer.id || matchup.opponent.id == choosenPlayer.id){
-                if (matchup.player.id == choosenPlayer.id){
+            if (mainEvent.roundsHistory.last!.matchup[index].player.id == choosenPlayer.id || mainEvent.roundsHistory.last!.matchup[index].opponent.id == choosenPlayer.id){
+                if (mainEvent.roundsHistory.last!.matchup[index].player.id == choosenPlayer.id){
                     predictPerRound.append(results["2-0"]!)
-                    matchup.victory = 2
-                    matchup.loss = 0
+                    mainEvent.roundsHistory.last!.matchup[index].victory = 2
+                    mainEvent.roundsHistory.last!.matchup[index].loss = 0
+                    mainEvent.players[matchup.player.id].points += 3
                 }else{
                     predictPerRound.append(results["0-2"]!)
-                    matchup.victory = 0
-                    matchup.loss = 2
+                    mainEvent.roundsHistory.last!.matchup[index].victory = 0
+                    mainEvent.roundsHistory.last!.matchup[index].loss = 2
+                    mainEvent.players[matchup.opponent.id].points += 3
                 }
                 
             }else{
@@ -54,27 +56,45 @@ class Predictor {
                 print("Value: \(String(describing: maxValue?.value))")
                 switch(maxValue?.key){
                 case "2-0":
-                    matchup.victory = 2
-                    matchup.loss = 0
+                    mainEvent.roundsHistory.last!.matchup[index].victory = 2
+                    mainEvent.roundsHistory.last!.matchup[index].loss = 0
+                    mainEvent.players[matchup.player.id].points += 3
                     break
                 case "2-1":
-                    matchup.victory = 2
-                    matchup.loss = 1
+                    mainEvent.roundsHistory.last!.matchup[index].victory = 2
+                    mainEvent.roundsHistory.last!.matchup[index].loss = 1
+                    mainEvent.players[matchup.player.id].points += 3
                     break
                 case "1-2":
-                    matchup.victory = 1
-                    matchup.loss = 2
+                    mainEvent.roundsHistory.last!.matchup[index].victory = 1
+                    mainEvent.roundsHistory.last!.matchup[index].loss = 2
+                    mainEvent.players[matchup.opponent.id].points += 3
                     break
                 default:
-                    matchup.victory = 0
-                    matchup.loss = 2
+                    mainEvent.roundsHistory.last!.matchup[index].victory = 0
+                    mainEvent.roundsHistory.last!.matchup[index].loss = 2
+                    mainEvent.players[matchup.opponent.id].points += 3
                     break
                 }
             }
         }
     }
     
-    func predictResult() -> Float{
+    func predictResult() -> Double{
+        if predictPerRound.count > 1{
+            return predictPerRound.popLast()!/predictResult()
+        }else{
+            return 1
+        }
+    }
+    
+    func iterateRounds(){
+        for _ in 0...mainEvent.rounds!{
+            //Generate Round
+            mainEvent.roundsHistory.append(EventGenerator.newRound(event: mainEvent))
+            //Define Results
+            roundResults()
+        }
     }
     
 }

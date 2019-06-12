@@ -11,12 +11,13 @@ import Foundation
 class Player {
     var name: String
     var id: Int
-    var points: Int?
+    var points: Int
     var deck: Deck
     
     init(name: String, deck: Deck, id: Int){
         self.name = name
         self.deck = deck
         self.id = id
+        self.points = 0
     }
 }
