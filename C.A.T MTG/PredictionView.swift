@@ -11,6 +11,8 @@ import UIKit
 
 class PredictionView: UIView{
     
+    var didLayoutSubviews = false
+    
     let choiceContainer: UIView = {
        let view = UIView.newAutoLayout()
         view.layer.borderWidth = 5
@@ -80,5 +82,82 @@ class PredictionView: UIView{
         let label = UILabel.newAutoLayout()
         return label
     }()
+    
+    let button: UIButton = {
+        let button = UIButton.newAutoLayout()
+        return button
+    }()
+    
+    func setupSubviews(){
+        self.addSubview(choiceContainer)
+        self.choiceContainer.addSubview(deckInfoTitle)
+        self.choiceContainer.addSubview(deckInfoLabel)
+        self.choiceContainer.addSubview(eventSizeTitle)
+        self.choiceContainer.addSubview(eventSizeLabel)
+        self.choiceContainer.addSubview(eventRoundsTitle)
+        self.choiceContainer.addSubview(eventRoundsTitle)
+        self.choiceContainer.addSubview(eventNofPLayersTitle)
+        self.choiceContainer.addSubview(eventNofPLayersLabel)
+        
+        self.addSubview(predictionContainer)
+        self.predictionContainer.addSubview(predictionTitle)
+        self.predictionContainer.addSubview(predictionLabel)
+        
+        self.addSubview(button)
+        
+        layoutSubviews()
+    }
+    
+    override func layoutSubviews() {
+        if(!didLayoutSubviews){
+            self.choiceContainer.autoPinEdges(toSuperviewMarginsExcludingEdge: .bottom)
+            
+            //deckInfo Title
+            self.deckInfoTitle.autoPinEdge(toSuperviewMargin: .top)
+            self.deckInfoTitle.autoPinEdge(toSuperviewMargin: .leading)
+            //deckInfo Label
+            self.deckInfoLabel.autoPinEdge(toSuperviewMargin: .top)
+            self.deckInfoLabel.autoPinEdge(toSuperviewMargin: .trailing)
+            
+            //EventSize Title
+            self.eventSizeTitle.autoPinEdge(.top, to: .bottom, of: self.deckInfoTitle, withOffset: 2)
+            self.eventSizeTitle.autoPinEdge(toSuperviewMargin: .leading)
+            //eventSize Label
+            self.eventSizeLabel.autoPinEdge(.top, to: .top, of: self.eventSizeTitle)
+            self.eventSizeLabel.autoPinEdge(toSuperviewMargin: .trailing)
+            
+            //Rounds Title
+            self.eventRoundsTitle.autoPinEdge(.top, to: .bottom, of: self.eventSizeTitle, withOffset: 2)
+            self.eventRoundsTitle.autoPinEdge(toSuperviewMargin: .leading)
+            //Rounds Label
+            self.eventRoundsLabel.autoPinEdge(.top, to: .top, of: self.eventRoundsTitle)
+            self.eventRoundsLabel.autoPinEdge(toSuperviewMargin: .trailing)
+            
+            //N of Players Title
+            self.eventNofPLayersTitle.autoPinEdge(.top, to: .bottom, of: self.eventSizeTitle, withOffset: 2)
+            self.eventNofPLayersTitle.autoPinEdge(toSuperviewMargin: .leading)
+            self.eventNofPLayersTitle.autoPinEdge(toSuperviewMargin: .bottom)
+            //N of Players Label
+            self.eventNofPLayersLabel.autoPinEdge(.top, to: .top, of: self.eventRoundsTitle)
+            self.eventNofPLayersLabel.autoPinEdge(toSuperviewMargin: .trailing)
+            self.eventNofPLayersTitle.autoPinEdge(toSuperviewMargin: .bottom)
+            
+            self.predictionContainer.autoPinEdge(.top, to: .bottom, of: self.choiceContainer, withOffset: 5)
+            self.predictionContainer.autoPinEdge(toSuperviewSafeArea: .leading)
+            self.predictionContainer.autoPinEdge(toSuperviewSafeArea: .trailing)
+            
+            //Prediction Title
+            self.predictionTitle.autoPinEdges(toSuperviewMarginsExcludingEdge: .bottom)
+            //Prediction Label
+            self.predictionLabel.autoPinEdges(toSuperviewMarginsExcludingEdge: .top)
+            self.predictionLabel.autoPinEdge(.top, to: .bottom, of: self.predictionTitle, withOffset: 5)
+            
+            self.button.autoPinEdges(toSuperviewMarginsExcludingEdge: .top)
+            self.button.autoPinEdge(.top, to: .bottom, of: self.predictionContainer, withOffset: 5)
+            
+            didLayoutSubviews = true
+        }
+        super.layoutSubviews()
+    }
         
 }

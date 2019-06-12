@@ -26,6 +26,7 @@ class PredictionViewController: UIViewController {
     
     override func viewDidLoad() {
         self.view.addSubview(predictionView)
+        self.predictionView.autoPinEdgesToSuperviewSafeArea()
     }
     
     func eventResult(){
