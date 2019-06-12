@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var choosendeck: Deck?
+    var eventSize: EventSize?
+    
     let parametersView:  ParametersView = {
         let view = ParametersView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -29,21 +32,27 @@ class ViewController: UIViewController {
     
     func pickDeck(){
         let picker = PickerViewController()
-        picker.setDataSource(decks: DeckInfo.getDecks(), strings: [])
+        picker.setDataSource(decks: DeckInfo.getDecks())
         picker.delegate = self
         picker.preferredContentSize = .init(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - (UIScreen.main.bounds.height/4)))
         picker.modalPresentationStyle = .overFullScreen
         self.present(picker, animated: true, completion: nil)
     }
-
-
+    
+    func pickEventSize(){
+        let picker = PickerViewController()
+        picker.setDataSource(decks: [])
+        picker.delegate = self
+        picker.preferredContentSize = .init(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - (UIScreen.main.bounds.height/4)))
+        picker.modalPresentationStyle = .overFullScreen
+        self.present(picker, animated: true, completion: nil)
+    }
 }
 
 extension ViewController: setParametersAndPredict{
     func setFormat() {
         print("Modern?")
         self.parametersView.formatChooser.text?.append(contentsOf: " Modern")
-//        self.parametersView.formatChooser.text = "\(NSLocalizedString("format", comment: "")): \()"
     }
     
     func setDeck() {
@@ -52,25 +61,37 @@ extension ViewController: setParametersAndPredict{
     
     func setEventSize() {
         print("Small?")
-        self.parametersView.eventSizeChooser.text?.append(contentsOf: " Small")
-//        self.parametersView.formatChooser.text = "\(NSLocalizedString("eventSize", comment: "")): \()"
+        pickEventSize()
     }
     
     func runPredict() {
-        print("No can do!")
-        //TODO: Make basic prediction first
+        if let deck = choosendeck, let size = eventSize {
+            self.present(PredictionViewController(deck: deck, format: "Modern", eventSize: size), animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: NSLocalizedString("choiceErrorTitle", comment: ""),
+                                          message: NSLocalizedString("choiceErrorText", comment: ""),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { alertAction in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
 }
 
 extension ViewController: ChooseDeck{
     
-    func choosenDeck(deck: Deck) {
-        self.parametersView.deckChooser.text? = "\(NSLocalizedString("format", comment: "")): \(deck.name)"
+    
+    func choosenSize(size: EventSize) {
+        eventSize = size
+        self.parametersView.eventSizeChooser.text? = "\(NSLocalizedString("eventSize", comment: "")): \(size.localizedString())"
     }
     
-    func choosenFormat(format: String) {
-//        nada acontece
+    
+    func choosenDeck(deck: Deck) {
+        choosendeck = deck
+        self.parametersView.deckChooser.text? = "\(NSLocalizedString("format", comment: "")): \(deck.name)"
     }
     
     

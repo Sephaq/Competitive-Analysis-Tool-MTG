@@ -7,10 +7,14 @@
 //
 
 import Foundation
-enum EventSize {
-    case small
-    case medium
-    case big
+enum EventSize: String,CaseIterable {
+    case small = "small"
+    case medium = "medium"
+    case big = "big"
+    
+    func localizedString() -> String{
+        return NSLocalizedString(self.rawValue, comment: "")
+    }
 }
 
 class Event {

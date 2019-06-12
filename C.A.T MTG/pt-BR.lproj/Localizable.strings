@@ -14,3 +14,8 @@
 "deckInfo" = "Informação do Baralho";
 "rounds"= "Rodadas";
 "eventSize" = "Tamanho do Evento";
+"choiceErrorTitle" = "Parametros não definidos.";
+"choiceErrorText" = "Por favor defina todos os parametros antes de realizar uma predição.";
+"big" = "Grande";
+"small" = "Pequeno";
+"medium" = "Medio";

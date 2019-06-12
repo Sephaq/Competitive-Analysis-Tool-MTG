@@ -11,13 +11,13 @@ import UIKit
 
 protocol ChooseDeck: class {
     func choosenDeck(deck: Deck)
-    func choosenFormat(format: String)
+    func choosenSize(size: EventSize)
 }
 
 class PickerViewController: UIViewController{
     
     var deckSource: [Deck] = []
-    var stringSource: [String] = []
+//    var stringSource: [String] = []
     var doneButton = UIButton.newAutoLayout()
     let pickerView = UIPickerView.newAutoLayout()
     weak var delegate: ChooseDeck?
@@ -65,9 +65,11 @@ class PickerViewController: UIViewController{
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
     }
     
-    func setDataSource(decks: [Deck], strings: [String]){
+    func setDataSource(decks: [Deck]){
         self.deckSource = decks
-        self.stringSource = strings
+//        self.stringSource = [NSLocalizedString("small", comment: ""),
+//                             NSLocalizedString("medium", comment: ""),
+//                             NSLocalizedString("big", comment: "")]
     }
     
     //Button Action
@@ -75,7 +77,7 @@ class PickerViewController: UIViewController{
         if (deckSource.count > 0){
             self.delegate?.choosenDeck(deck: self.deckSource[pickerView.selectedRow(inComponent: 0)])
         }else{
-            self.delegate?.choosenFormat(format: self.stringSource[pickerView.selectedRow(inComponent: 0)])
+            self.delegate?.choosenSize(size: EventSize.allCases[pickerView.selectedRow(inComponent: 0)])
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -91,13 +93,13 @@ extension PickerViewController: UIPickerViewDataSource, UIPickerViewDelegate{
         if (deckSource.count > 0){
             return deckSource.count
         }
-        return stringSource.count
+        return EventSize.allCases.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (deckSource.count > 0){
             return deckSource[row].name
         }
-        return stringSource[row]
+        return EventSize.allCases[row].localizedString()
     }
 }

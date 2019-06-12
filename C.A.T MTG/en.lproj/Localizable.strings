@@ -14,3 +14,8 @@
 "deckInfo" = "Deck Info";
 "rounds" = "Rounds";
 "eventSize" = "Event Size";
+"choiceErrorTitle" = "Parameters not choosen.";
+"choiceErrorText" = "Please define all parameters before making a prediction.";
+"big" = "Big";
+"small" = "Small";
+"medium" = "Medium";
