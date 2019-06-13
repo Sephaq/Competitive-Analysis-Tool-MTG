@@ -51,7 +51,6 @@ class ViewController: UIViewController {
 
 extension ViewController: setParametersAndPredict{
     func setFormat() {
-        print("Modern?")
         self.parametersView.formatChooser.text?.append(contentsOf: " Modern")
     }
     
@@ -60,13 +59,13 @@ extension ViewController: setParametersAndPredict{
     }
     
     func setEventSize() {
-        print("Small?")
         pickEventSize()
     }
     
     func runPredict() {
         if let deck = choosendeck, let size = eventSize {
-            self.present(PredictionViewController(deck: deck, format: "Modern", eventSize: size), animated: true, completion: nil)
+            let predictionController = PredictionViewController(deck: deck, format: "Modern", eventSize: size)
+            self.navigationController?.pushViewController(predictionController, animated: true)
         }else{
             let alert = UIAlertController(title: NSLocalizedString("choiceErrorTitle", comment: ""),
                                           message: NSLocalizedString("choiceErrorText", comment: ""),
@@ -81,7 +80,6 @@ extension ViewController: setParametersAndPredict{
 }
 
 extension ViewController: ChooseDeck{
-    
     
     func choosenSize(size: EventSize) {
         eventSize = size

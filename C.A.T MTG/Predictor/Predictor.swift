@@ -84,7 +84,7 @@ class Predictor {
         if predictPerRound.count > 1{
             return predictPerRound.popLast()!/predictResult()
         }else{
-            return 1
+            return predictPerRound.popLast()!
         }
     }
     
@@ -95,6 +95,14 @@ class Predictor {
             //Define Results
             roundResults()
         }
+    }
+    
+    func getChoosenPlayer() -> Player{
+        return choosenPlayer
+    }
+    
+    func getEvent() -> Event{
+        return mainEvent
     }
     
 }

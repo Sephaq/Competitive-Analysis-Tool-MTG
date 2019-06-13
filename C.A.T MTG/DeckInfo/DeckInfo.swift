@@ -36,7 +36,6 @@ class DeckInfo: NSObject {
     }
     
     static func loadDeckInfo(){
-        
         var totalDecks = Array<Deck>()
         if let path = Bundle.main.path(forResource: "deckRepresentativity", ofType: ".json"){
             do{
@@ -48,7 +47,7 @@ class DeckInfo: NSObject {
                     totalDecks.append(Deck(name: deckLists[(deck["deckId"].intValue)-1].name, type: deckLists[(deck["deckId"].intValue)-1].type, id: deckLists[(deck["deckId"].intValue)-1].id))
                 }
             }catch {
-                print("Json Error")
+                print("Json Error: \(error)")
             }
         }
         var counts: [Int:Int] = [:]
@@ -60,6 +59,7 @@ class DeckInfo: NSObject {
     }
     
     static func deckRepresentativty() -> [Int:Float]{
+        print("Total Decks: \(totalDecks)")
         var representativity: [Int:Float] = [:]
         deckLists.forEach{
             representativity[$0.id,default: Float(deckRepresentativity[$0.id] ?? 0/totalDecks)]

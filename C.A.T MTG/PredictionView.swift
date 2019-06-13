@@ -15,7 +15,7 @@ class PredictionView: UIView{
     
     let choiceContainer: UIView = {
        let view = UIView.newAutoLayout()
-        view.layer.borderWidth = 5
+        view.layer.borderWidth = 2
         view.layer.cornerRadius = 5
         view.layer.borderColor = UIColor.black.cgColor
         return view
@@ -67,7 +67,7 @@ class PredictionView: UIView{
     
     let predictionContainer: UIView = {
         let view = UIView.newAutoLayout()
-        view.layer.borderWidth = 5
+        view.layer.borderWidth = 2
         view.layer.cornerRadius = 5
         view.layer.borderColor = UIColor.black.cgColor
         return view
@@ -95,7 +95,7 @@ class PredictionView: UIView{
         self.choiceContainer.addSubview(eventSizeTitle)
         self.choiceContainer.addSubview(eventSizeLabel)
         self.choiceContainer.addSubview(eventRoundsTitle)
-        self.choiceContainer.addSubview(eventRoundsTitle)
+        self.choiceContainer.addSubview(eventRoundsLabel)
         self.choiceContainer.addSubview(eventNofPLayersTitle)
         self.choiceContainer.addSubview(eventNofPLayersLabel)
         
@@ -118,6 +118,7 @@ class PredictionView: UIView{
             //deckInfo Label
             self.deckInfoLabel.autoPinEdge(toSuperviewMargin: .top)
             self.deckInfoLabel.autoPinEdge(toSuperviewMargin: .trailing)
+            self.deckInfoLabel.autoPinEdge(.leading, to: .trailing, of: self.deckInfoTitle, withOffset: 5)
             
             //EventSize Title
             self.eventSizeTitle.autoPinEdge(.top, to: .bottom, of: self.deckInfoTitle, withOffset: 2)
@@ -125,6 +126,7 @@ class PredictionView: UIView{
             //eventSize Label
             self.eventSizeLabel.autoPinEdge(.top, to: .top, of: self.eventSizeTitle)
             self.eventSizeLabel.autoPinEdge(toSuperviewMargin: .trailing)
+            self.eventSizeLabel.autoPinEdge(.leading, to: .leading, of: self.eventSizeTitle, withOffset: 5)
             
             //Rounds Title
             self.eventRoundsTitle.autoPinEdge(.top, to: .bottom, of: self.eventSizeTitle, withOffset: 2)
@@ -132,15 +134,17 @@ class PredictionView: UIView{
             //Rounds Label
             self.eventRoundsLabel.autoPinEdge(.top, to: .top, of: self.eventRoundsTitle)
             self.eventRoundsLabel.autoPinEdge(toSuperviewMargin: .trailing)
+            self.eventRoundsLabel.autoPinEdge(.leading, to: .leading, of: self.eventRoundsTitle, withOffset: 5)
             
             //N of Players Title
-            self.eventNofPLayersTitle.autoPinEdge(.top, to: .bottom, of: self.eventSizeTitle, withOffset: 2)
+            self.eventNofPLayersTitle.autoPinEdge(.top, to: .bottom, of: self.eventRoundsTitle, withOffset: 2)
             self.eventNofPLayersTitle.autoPinEdge(toSuperviewMargin: .leading)
             self.eventNofPLayersTitle.autoPinEdge(toSuperviewMargin: .bottom)
             //N of Players Label
-            self.eventNofPLayersLabel.autoPinEdge(.top, to: .top, of: self.eventRoundsTitle)
+            self.eventNofPLayersLabel.autoPinEdge(.top, to: .top, of: self.eventNofPLayersTitle)
             self.eventNofPLayersLabel.autoPinEdge(toSuperviewMargin: .trailing)
-            self.eventNofPLayersTitle.autoPinEdge(toSuperviewMargin: .bottom)
+            self.eventNofPLayersLabel.autoPinEdge(toSuperviewMargin: .bottom)
+            self.eventNofPLayersLabel.autoPinEdge(.leading, to: .leading, of: self.eventNofPLayersTitle, withOffset: 5)
             
             self.predictionContainer.autoPinEdge(.top, to: .bottom, of: self.choiceContainer, withOffset: 5)
             self.predictionContainer.autoPinEdge(toSuperviewSafeArea: .leading)

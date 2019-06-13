@@ -11,19 +11,19 @@ import Foundation
 class EventGenerator: NSObject {
     
     static func setPlayers(players: Int) -> [Player]{
-        let representativity = DeckInfo.deckRepresentativty()
+//        let representativity = DeckInfo.deckRepresentativty()
         var playersDeck = Array<Player>()
-        var nOfDecks: [Int:Int] = [:]
-        var total = 0
-        for i in representativity{
-            nOfDecks.updateValue(Int(roundf(i.value * Float(players))), forKey: i.key)
-            total += Int(roundf(i.value * Float(players)))
-        }
-        let decksId = Array(nOfDecks.keys).count
-            for i in 1...players+1{
-                let randomDeck = Int.random(in: 0...decksId)
-                print(nOfDecks[randomDeck])
-                playersDeck.append(Player(name: "player\(i)", deck: DeckInfo.getDeckInfo(id: randomDeck), id: i))
+//        var nOfDecks: [Int:Int] = [:]
+//        var total = 0
+//        for i in representativity{
+//            nOfDecks.updateValue(Int(roundf(i.value * Float(players))), forKey: i.key)
+//            total += Int(roundf(i.value * Float(players)))
+//        }
+        let decksId = DeckInfo.getDecks()
+            for i in 1...players-1{
+                let randomDeck = Int.random(in: 0...decksId.count-1)
+                print(decksId[randomDeck].id)
+                playersDeck.append(Player(name: "player\(i)", deck: decksId[randomDeck], id: i))
                 
             }
         return playersDeck
@@ -61,8 +61,9 @@ class EventGenerator: NSObject {
             var maybeOpponent: Player?
             for pOpponent in event.players.filter({ opponent in (player.points <= opponent.points &&
                 player.id != opponent.id &&
-                !(havePlayedAgainst(p1: player, p2: opponent, event: event)) &&
-                !pairedPlayers.contains(where: { pairedPlayer -> Bool in pairedPlayer.id == opponent.id }))}){
+                !(havePlayedAgainst(p1: player, p2: opponent, event: event))
+                && !pairedPlayers.contains(where: { pairedPlayer -> Bool in pairedPlayer.id == opponent.id })
+                )}){
                     if (player.points == pOpponent.points){
                         round.matchup.append(Matchup(player: player, opponent: pOpponent))
                         pairedPlayers.append(player)
@@ -78,9 +79,27 @@ class EventGenerator: NSObject {
                         }
                 }
             }
-            round.matchup.append(Matchup(player: player, opponent: maybeOpponent!))
-            pairedPlayers.append(player)
-            pairedPlayers.append(maybeOpponent!)
+            if (event.players.last?.id == player.id){
+                break
+            }
+            if(maybeOpponent == nil){
+                for pOpponent in event.players.filter({ opponent in (player.points <= opponent.points &&
+                    player.id != opponent.id &&
+                    !pairedPlayers.contains(where: { pairedPlayer -> Bool in pairedPlayer.id == opponent.id })
+                    )}){
+                        if maybeOpponent == nil{
+                            maybeOpponent = pOpponent
+                        }else{
+                            if (maybeOpponent?.points ?? 0 < pOpponent.points) {
+                                maybeOpponent = pOpponent
+                            }
+                        }
+                }
+            }else{
+                round.matchup.append(Matchup(player: player, opponent: maybeOpponent!))
+                pairedPlayers.append(player)
+                pairedPlayers.append(maybeOpponent!)
+            }
         }
         return round
     }
