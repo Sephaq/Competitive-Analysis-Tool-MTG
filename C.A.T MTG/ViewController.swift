@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         self.parametersView.delegate = self
         self.view.addSubview(parametersView)
         DeckInfo.loadDeckLists()
-        DeckInfo.loadDeckInfo()
         parametersView.autoPinEdgesToSuperviewSafeArea()
         self.title = NSLocalizedString("C.A.T.", comment: "")
     }

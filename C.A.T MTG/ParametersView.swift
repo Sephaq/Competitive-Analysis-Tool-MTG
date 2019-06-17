@@ -110,7 +110,8 @@ class ParametersView: UIView{
     @objc let predictButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "switch"), for: .normal)
+        button.setTitle(NSLocalizedString("makePrediction", comment: ""), for: .normal)
+        button.setTitleColor(UIColor.blue, for: .normal)
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.black.cgColor

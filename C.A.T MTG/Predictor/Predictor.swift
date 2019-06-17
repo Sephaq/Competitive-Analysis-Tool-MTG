@@ -82,7 +82,7 @@ class Predictor {
     
     func predictResult() -> Double{
         if predictPerRound.count > 1{
-            return predictPerRound.popLast()!/predictResult()
+            return predictPerRound.popLast()!*predictResult()
         }else{
             return predictPerRound.popLast()!
         }

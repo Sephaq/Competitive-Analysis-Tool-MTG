@@ -12,7 +12,7 @@ import Foundation
 class DeckInfo: NSObject {
     
     static private var deckLists = Array<Deck>()
-    static private var deckRepresentativity: [Int:Int] = [:]
+//    static private var deckRepresentativity: [Int:Int] = [:]
     static private var totalDecks: Int = 0
     
     static func loadDeckLists(){
@@ -35,38 +35,38 @@ class DeckInfo: NSObject {
         
     }
     
-    static func loadDeckInfo(){
-        var totalDecks = Array<Deck>()
-        if let path = Bundle.main.path(forResource: "deckRepresentativity", ofType: ".json"){
-            do{
-                let url = URL(fileURLWithPath: path)
-                let data = try Data(contentsOf: url)
-                let json = try JSON(data: data)
-                let jsonArray = json["representativity"].arrayValue
-                for deck in jsonArray{
-                    totalDecks.append(Deck(name: deckLists[(deck["deckId"].intValue)-1].name, type: deckLists[(deck["deckId"].intValue)-1].type, id: deckLists[(deck["deckId"].intValue)-1].id))
-                }
-            }catch {
-                print("Json Error: \(error)")
-            }
-        }
-        var counts: [Int:Int] = [:]
-        totalDecks.forEach {counts[$0.id,default: 0] += 1}
-        self.totalDecks = totalDecks.count
-        deckRepresentativity = counts
-        print("\(counts)")
-        print("\(deckRepresentativity)")
-    }
-    
-    static func deckRepresentativty() -> [Int:Float]{
-        print("Total Decks: \(totalDecks)")
-        var representativity: [Int:Float] = [:]
-        deckLists.forEach{
-            representativity[$0.id,default: Float(deckRepresentativity[$0.id] ?? 0/totalDecks)]
-        }
-        print("\(representativity)")
-        return representativity
-    }
+//    static func loadDeckInfo(){
+//        var totalDecks = Array<Deck>()
+//        if let path = Bundle.main.path(forResource: "deckRepresentativity", ofType: ".json"){
+//            do{
+//                let url = URL(fileURLWithPath: path)
+//                let data = try Data(contentsOf: url)
+//                let json = try JSON(data: data)
+//                let jsonArray = json["representativity"].arrayValue
+//                for deck in jsonArray{
+//                    totalDecks.append(Deck(name: deckLists[(deck["deckId"].intValue)-1].name, type: deckLists[(deck["deckId"].intValue)-1].type, id: deckLists[(deck["deckId"].intValue)-1].id))
+//                }
+//            }catch {
+//                print("Json Error: \(error)")
+//            }
+//        }
+//        var counts: [Int:Int] = [:]
+//        totalDecks.forEach {counts[$0.id,default: 0] += 1}
+//        self.totalDecks = totalDecks.count
+//        deckRepresentativity = counts
+//        print("\(counts)")
+//        print("\(deckRepresentativity)")
+//    }
+//
+//    static func deckRepresentativty() -> [Int:Float]{
+//        print("Total Decks: \(totalDecks)")
+//        var representativity: [Int:Float] = [:]
+//        deckLists.forEach{
+//            representativity[$0.id,default: Float(deckRepresentativity[$0.id] ?? 0/totalDecks)]
+//        }
+//        print("\(representativity)")
+//        return representativity
+//    }
     
     static func getDeckInfo(id: Int) -> Deck{
         let deck = deckLists.filter({ $0.id == id })

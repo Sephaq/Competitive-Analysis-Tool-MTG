@@ -308,14 +308,14 @@
 				E44E79CB228A598500772852 /* Model */,
 				E44E79B9228A58A600772852 /* AppDelegate.swift */,
 				E44E79BB228A58A600772852 /* ViewController.swift */,
-				E44E79C0228A58A800772852 /* Assets.xcassets */,
-				E44E79C2228A58A800772852 /* LaunchScreen.storyboard */,
-				E44E79C5228A58A800772852 /* Info.plist */,
 				E44E79D1228A5A9900772852 /* ParametersView.swift */,
-				E44E7B02228EFBE700772852 /* Localizable.strings */,
 				E44ECC8E22AEF4F6002ABCC0 /* PickerViewController.swift */,
 				E4528FD022B13C1600DA7ECC /* PredictionViewController.swift */,
 				E4528FDA22B13C2700DA7ECC /* PredictionView.swift */,
+				E44E79C2228A58A800772852 /* LaunchScreen.storyboard */,
+				E44E79C0228A58A800772852 /* Assets.xcassets */,
+				E44E79C5228A58A800772852 /* Info.plist */,
+				E44E7B02228EFBE700772852 /* Localizable.strings */,
 			);
 			path = "C.A.T MTG";
 			sourceTree = "<group>";

@@ -40,7 +40,7 @@ class PredictionViewController: UIViewController {
         let player = predictor.getChoosenPlayer()
         let event = predictor.getEvent()
         self.predictionView.deckInfoLabel.text = player.deck.name
-        self.predictionView.eventRoundsLabel.text = "\(String(describing: event.rounds))"
+        self.predictionView.eventRoundsLabel.text = "\(event.rounds!)"
         self.predictionView.eventSizeLabel.text = event.eventSize?.localizedString()
         self.predictionView.eventNofPLayersLabel.text = "\(event.players.count)"
         self.predictionView.predictionLabel.text = "\(predictor.predictResult()*100)%"

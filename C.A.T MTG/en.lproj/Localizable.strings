@@ -19,3 +19,5 @@
 "big" = "Big";
 "small" = "Small";
 "medium" = "Medium";
+"makePrediction" = "Make Prediction";
+"predictionTitle"= "Chance of winning";

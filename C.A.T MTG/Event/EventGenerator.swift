@@ -11,14 +11,7 @@ import Foundation
 class EventGenerator: NSObject {
     
     static func setPlayers(players: Int) -> [Player]{
-//        let representativity = DeckInfo.deckRepresentativty()
         var playersDeck = Array<Player>()
-//        var nOfDecks: [Int:Int] = [:]
-//        var total = 0
-//        for i in representativity{
-//            nOfDecks.updateValue(Int(roundf(i.value * Float(players))), forKey: i.key)
-//            total += Int(roundf(i.value * Float(players)))
-//        }
         let decksId = DeckInfo.getDecks()
             for i in 1...players-1{
                 let randomDeck = Int.random(in: 0...decksId.count-1)
